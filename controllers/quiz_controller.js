@@ -11,3 +11,13 @@ exports.answer = function (req, res) {
         res.render('quizes/answer', {respuesta: 'Incorrecto'});
     }
 };
+
+// GET /author
+exports.author = function(req, res) {
+    var data = [];
+    var autor = new Object;
+    autor['nombre'] = 'Jorge Navarro';
+    autor['imagen'] = '/images/author_1.png';
+    data.push(autor);
+    res.render('author', {autores: data});
+};
